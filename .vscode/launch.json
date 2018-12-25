@@ -1,0 +1,80 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "register",
+            "program": "${workspaceFolder}/register.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "read",
+            "program": "${workspaceFolder}/read.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "list",
+            "program": "${workspaceFolder}/list.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "check",
+            "program": "${workspaceFolder}/check.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "check2",
+            "program": "${workspaceFolder}/check2.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "read2",
+            "program": "${workspaceFolder}/read2.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "read3",
+            "program": "${workspaceFolder}/read3.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "read4",
+            "program": "${workspaceFolder}/read4.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "read5",
+            "program": "${workspaceFolder}/read5.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "activity",
+            "program": "${workspaceFolder}/activity.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "activity2",
+            "program": "${workspaceFolder}/activity2.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "activity3",
+            "program": "${workspaceFolder}/activity3.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "activity4",
+            "program": "${workspaceFolder}/activity4.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "status",
+            "program": "${workspaceFolder}/status.js"
+        }
+    ]
+}
