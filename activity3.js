@@ -3,7 +3,7 @@ require('superagent-charset')(superagent)
 const cheerio = require('cheerio')
 var fs = require('fs');
 var file1 = './tongchang3.json'
-var buffer = fs.readFileSync(file1)
+var text = fs.readFileSync(file1)
 
 
 var tongchang = 'jsvol-token=c152052ad566bed326e83cf0052afc20; type=org' //1 2 3
@@ -16,9 +16,9 @@ var wenwo = 'jsvol-token=e305187d981b9dd81c26df6808170c50; type=org' //1 2 3
 var yuquanhe = 'jsvol-token=4a7c2db435dc45aaefe73bd27daf6aec; type=org' //1 3
 var hangou = 'jsvol-token=2fc0505adb2838c2db1e141a0a5442a7; type=org' //1 3
 
-var tongchang1 = {}
-if (!buffer) {
-    tongchang1 = JSON.parse(buffer);
+var json = {}
+if (!text) {
+    json = JSON.parse(text);
 }
 var count = 0
 var pages = 10000
@@ -42,7 +42,7 @@ function activityList(href) {
                 // let pages = 5
                 let i = 1
                 let timer = setInterval(() => {
-                    if (!tongchang1[i]) {
+                    if (!json[i]) {
                         doActivity(id, i)
                     }
                     if (i == pages) {
@@ -62,17 +62,7 @@ function doActivity(id, i) {
         pageSize: pageSize
     }
     superagent.post('http://www.jsvolunteer.org/org/default/org-users')
-        .set('Accept', 'application/json, text/javascript, */*; q=0.01')
-        .set('Accept-Encoding', 'gzip, deflate')
-        .set('Accept-Language', 'zh-CN,zh;q=0.9')
-        .set('Connection', 'keep-alive')
-        .set('Content-Length', '67')
-        .set('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
-        .set('Host', 'www.jsvolunteer.org')
-        .set('Origin', 'http://www.jsvolunteer.org')
-        .set('Referer', 'http://www.jsvolunteer.org/org/default/index?tab=4')
-        .set('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36')
-        .set('X-Requested-With', 'XMLHttpRequest')
+        .set('Content-Type', 'application/x-www-form-urlencoded')
         .set('Cookie', cookie)
         .send(data)
         .end(function (err, res) {
@@ -85,6 +75,9 @@ function doActivity(id, i) {
             total = text.total
             let uid = "";
             let items = text.items
+            if (items.length != pageSize) {
+                debugger
+            }
             for (const v of items) {
                 if (v.state == 0) {
                     var uidlist = v.userid + ",";
@@ -92,14 +85,13 @@ function doActivity(id, i) {
                 }
             }
             if (!uid) {
-                tongchang1[i] = 1
+                json[i] = 1
                 console.log(i + ':' + '已录取')
+                write()
                 return
             }
             uid = uid.substring(0, uid.lastIndexOf(','))
-            if(uid.split(',').length>pageSize){
-                debugger
-            }
+            
             let adata = {
                 uid: uid,
                 aid: id
@@ -126,15 +118,18 @@ function doActivity(id, i) {
                     }
                     var text = JSON.parse(res.text)
                     console.log(i + ':' + text.state + text.message)
-                    if (count / 10 == 0 || count == pages) {
-                        fs.writeFile(file1, buffer, function (err) {
-                            if (err)
-                                throw err
-                            console.log(file1 + '写入成功');
-                        })
-                    }
+                    write()
                 })
         })
+}
+function write() {
+    if (count % 10 == 0 || count == pages) {
+        fs.writeFile(file1, json, function (err) {
+            if (err)
+                throw err
+            console.log(file1 + '写入成功');
+        })
+    }
 }
 activityList()
 // doActivity('4028018259877d6f0159af83c2106871', 2485)
