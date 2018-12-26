@@ -75,6 +75,21 @@
             "request": "launch",
             "name": "status",
             "program": "${workspaceFolder}/status.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "time",
+            "program": "${workspaceFolder}/time.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "time2",
+            "program": "${workspaceFolder}/time2.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "time3",
+            "program": "${workspaceFolder}/time3.js"
         }
     ]
 }

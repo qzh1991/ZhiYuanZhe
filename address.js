@@ -5,10 +5,10 @@ var tongchang = {
     pwd: 'tc123456',
     area: '8ad881c94d9efa0d014d9f0526180db5',
     org: '4ae6ee4b5692b94f0156964bdacc415c',
-    jsvol_token:'c152052ad566bed326e83cf0052afc20',
+    jsvol_token:'jsvol-token=c152052ad566bed326e83cf0052afc20; type=org',
     api_token: 'f721b195ad572114f61412e61f9a7cd8',
 }
-//2 无名山 无名山社区志愿者服务站 wumingshanshequ 123456 320312009002 8ad881c94d9efa0d014d9f0526680db6
+//2 无名山 无名山社区志愿者服务站 13615112587 wumingshanshequ 123456 320312009002 8ad881c94d9efa0d014d9f0526680db6
 //完成
 var wumingshan = {
     name: '无名山',
@@ -16,6 +16,7 @@ var wumingshan = {
     area: '8ad881c94d9efa0d014d9f0526680db6',
     org: '4ae6ee4b56b2d33c0156b649600072f5',
     api_token: '21742cb7c7f08b575fede1cf52b4dc3f',
+    jsvol_token:'jsvol-token=920fb90f1ab3f57b9fe6c9406499ccbd; type=org',
 }
 //3 学苑 学苑社区志愿者服务队 320312009003 xueyuanshequ 12345678
 var xueyuan = {
@@ -43,6 +44,7 @@ var qiaocun = {
     area: '8ad881c94d9efa0d014d9f05277a0db9',
     org: '4ae6ee4b567c8842015690e9410632c9',
     api_token: '4d92a9f5d92a5e19c926a16575dff1bb',
+    jsvol_token:'jsvol-token=9cc1f84568f70c7644bb40e95d3a6601; type=org'
 }
 
 //6 焦山 320312009006
