@@ -90,6 +90,16 @@
             "request": "launch",
             "name": "time3",
             "program": "${workspaceFolder}/time3.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "time4",
+            "program": "${workspaceFolder}/time4.js"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "number",
+            "program": "${workspaceFolder}/number.js"
         }
     ]
 }

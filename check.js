@@ -2,15 +2,15 @@ const superagent = require('superagent')
 require('superagent-charset')(superagent)
 const cheerio = require('cheerio')
 
-var tongchang = 'jsvol-token=c152052ad566bed326e83cf0052afc20; type=org' //1 2 3
-var wumingshan = 'jsvol-token=920fb90f1ab3f57b9fe6c9406499ccbd; type=org' //1 3
-var gelou = 'jsvol-token=48f303a82c8192451221756c07967ef6; type=org' //1 2 3
-var qiaocun = 'jsvol-token=4f8af34d1e0d58a6c853c68c14d9a375; type=org' //1 2 3
-var xueyuan = 'jsvol-token=921ffb20e8427d4a1138b3e8b3d78b41; type=org' //1 2 3
-var longyaoshan = 'jsvol-token=b4a0cd3e6a8afcb24bbcd77edcd7f1dd; type=org' //1 2 3
-var wenwo = 'jsvol-token=e305187d981b9dd81c26df6808170c50; type=org' //1 2 3
-var yuquanhe = 'jsvol-token=4a7c2db435dc45aaefe73bd27daf6aec; type=org' //1 3
-var hangou = 'jsvol-token=2fc0505adb2838c2db1e141a0a5442a7; type=org' //1 3
+var tongchang = 'jsvol-token=c152052ad566bed326e83cf0052afc20; type=org' //1 2 3 4
+var wumingshan = 'jsvol-token=920fb90f1ab3f57b9fe6c9406499ccbd; type=org' //1 3 4
+var gelou = 'jsvol-token=48f303a82c8192451221756c07967ef6; type=org' //1 2 3 
+var qiaocun = 'jsvol-token=4f8af34d1e0d58a6c853c68c14d9a375; type=org' //1 2 3 4
+var xueyuan = 'jsvol-token=921ffb20e8427d4a1138b3e8b3d78b41; type=org' //1 2 3 
+var longyaoshan = 'jsvol-token=b4a0cd3e6a8afcb24bbcd77edcd7f1dd; type=org' //1 2 3 
+var wenwo = 'jsvol-token=e305187d981b9dd81c26df6808170c50; type=org' //1 2 3 
+var yuquanhe = 'jsvol-token=4a7c2db435dc45aaefe73bd27daf6aec; type=org' //1 3 3.5
+var hangou = 'jsvol-token=2fc0505adb2838c2db1e141a0a5442a7; type=org' //1 2 3 
 
 
 

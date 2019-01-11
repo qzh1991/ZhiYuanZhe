@@ -1,4 +1,4 @@
-//1 同昌 铜山街道同昌社区志愿者组织 tsjdtcsq 12345678 320312009001 8ad881c94d9efa0d014d9f0526180db5 
+//1 同昌 铜山街道同昌社区志愿者组织 17712991197 tsjdtcsq 12345678 320312009001 8ad881c94d9efa0d014d9f0526180db5 
 //完成
 var tongchang = {
     name: '同昌',
@@ -87,6 +87,7 @@ var yuquanhe = {
     area: '8a906a47c129fd4ae5930936988de97d',
     org: '4ae6ee4b5b611a86015b6122a9e907d4',
     api_token: '',
+    jsvol_token:'jsvol-token=f17c668a83b67bf854286049416e40b7; type=org'
 }
 // 11 桥上 铜山街道桥上村志愿者协会 淘宝做
 var qiaoshang = {
@@ -95,6 +96,7 @@ var qiaoshang = {
     area: '8ad881c94d9efa0d014d9f0528bc0dbb',
     org: '4ae6ee4b567c864c01568cc00d0034ac',
     api_token: '',
+    jsvol_token:'jsvol-token=; type=org'
 }
 //12 葛楼 葛楼村志愿者服务队 geloucun 12345678 最后做
 //完成
@@ -104,6 +106,7 @@ var gelou = {
     area: '8ad881c94d9efa0d014d9f0529b30dbd',
     org: '4ae6ee4b5692b94f0156968a24e65bc7',
     api_token: '',
+    jsvol_token:'jsvol-token=; type=org'
 }
 
 module.exports = { tongchang, wumingshan, xueyuan, wenwo, qiaocun, jiaoshan, longyaoshan, wangcheng, hangou, yuquanhe, qiaoshang, gelou }
